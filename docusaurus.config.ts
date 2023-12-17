@@ -40,7 +40,8 @@ const config: Config = {
                     rehypePlugins: [rehypeKatex],
                     sidebarPath: "./sidebars.ts",
                     routeBasePath: "notes",
-                    editUrl: "https://github.com/shensquared/introml-notes",
+                    editUrl:
+                        "https://github.com/shensquared/introml-notes/blob/main",
                 },
                 blog: false,
                 theme: {

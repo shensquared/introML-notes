@@ -3644,7 +3644,7 @@ dns-packet@^5.2.2:
 
 docusaurus-lunr-search@^3.3.1:
   version "3.3.1"
-  resolved "https://registry.npmjs.org/docusaurus-lunr-search/-/docusaurus-lunr-search-3.3.1.tgz"
+  resolved "https://registry.yarnpkg.com/docusaurus-lunr-search/-/docusaurus-lunr-search-3.3.1.tgz#4ee77853b21c1f6a652c9545d8ba8dc3bd8b3ab9"
   integrity sha512-EWUeHlTf+wVDLYLvgxeqavhww59elc9XfvlC9ZEHdeBT+kEbDdCdcC0CnHHeHVqePbMoHYfA8RhsXKYcLp6qgw==
   dependencies:
     autocomplete.js "^0.37.0"

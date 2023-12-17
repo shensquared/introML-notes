@@ -59,6 +59,12 @@ const config: Config = {
             crossorigin: "anonymous",
         },
     ],
+    scripts: [
+        {
+            src: "https://hypothes.is/embed.js",
+            async: true,
+        },
+    ],
     themeConfig: {
         // Replace with your project's social card
         image: "img/390.png",

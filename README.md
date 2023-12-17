@@ -1,6 +1,11 @@
-# Website
+# 6.390 IntroML Lecture Notes
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Source code for https://introml.mit.edu/notes
+- [ ] set up Nginx decoupling catsoop
+
+## Typos and/or fixes
+- Edit the `markdown` files under `notes` folder
+- Each note page should also have an "Edit the Page" hyperlink directly pointing to the source `*.md` file.
 
 ### Installation
 
@@ -38,4 +43,4 @@ Not using SSH:
 $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Built using [Docusaurus](https://docusaurus.io/).

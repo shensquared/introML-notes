@@ -88,9 +88,11 @@ const config: Config = {
                 },
             ],
         },
-        sidebar: {
-            hideable: true,
-            autoCollapseCategories: false,
+        docs: {
+            sidebar: {
+                hideable: true,
+                autoCollapseCategories: false,
+            },
         },
         prism: {
             theme: prismThemes.github,

@@ -2,7 +2,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
+// import rehypeKatex from "rehype-katex";
+import rehypeMathjax from "rehype-mathjax";
 const config: Config = {
     title: "Intro to Machine Learning",
     tagline: "6.390 IntroML Notes",
@@ -37,7 +38,25 @@ const config: Config = {
                 docs: {
                     path: "notes",
                     remarkPlugins: [remarkMath],
-                    rehypePlugins: [rehypeKatex],
+                    rehypePlugins: [
+                        [
+                            rehypeMathjax,
+                            {
+                                tex: {
+                                    inlineMath: [
+                                        ["$", "$"],
+                                        ["\\(", "\\)"],
+                                    ],
+                                    displayMath: [
+                                        ["$$", "$$"],
+                                        ["\\[", "\\]"],
+                                    ],
+                                    processEscapes: true,
+                                    tags: "ams",
+                                },
+                            },
+                        ],
+                    ],
                     sidebarPath: "./sidebars.ts",
                     routeBasePath: "notes",
                     editUrl:
@@ -50,18 +69,23 @@ const config: Config = {
             } satisfies Preset.Options,
         ],
     ],
-    stylesheets: [
-        {
-            href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
-            type: "text/css",
-            integrity:
-                "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
-            crossorigin: "anonymous",
-        },
-    ],
+    // stylesheets: [
+    //     {
+    //         href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+    //         type: "text/css",
+    //         integrity:
+    //             "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+    //         crossorigin: "anonymous",
+    //     },
+    // ],
     scripts: [
         {
             src: "https://hypothes.is/embed.js",
+            async: true,
+        },
+        {
+            // src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js",
+            src: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
             async: true,
         },
     ],

@@ -54,7 +54,6 @@ const config: Config = {
                                     ],
                                     processEscapes: true,
                                     tags: "ams",
-                                    equationNumbers: { autoNumber: "all" },
                                 },
                             },
                         ],

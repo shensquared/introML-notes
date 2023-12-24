@@ -1,99 +1,3 @@
----
-autoEqnLabels: false
-autoSectionLabels: false
-ccsDelim: ", "
-ccsLabelSep: " --- "
-ccsTemplate: $$i$$$$ccsLabelSep$$$$t$$
-chapDelim: .
-chapters: false
-chaptersDepth: 1
-codeBlockCaptions: false
-cref: false
-crossrefYaml: pandoc-crossref.yaml
-eqLabels: arabic
-eqnBlockInlineMath: false
-eqnBlockTemplate: |
-  <table>
-  <colgroup>
-  <col style="width: 90%" />
-  <col style="width: 10%" />
-  </colgroup>
-  <tbody>
-  <tr class="odd">
-  <td style="text-align: center;"><span
-  class="math display"><em>t</em></span></td>
-  <td style="text-align: right;"><span
-  class="math display"><em>i</em></span></td>
-  </tr>
-  </tbody>
-  </table>
-eqnIndexTemplate: ($$i$$)
-eqnInlineTemplate: $$e$$$$equationNumberTeX$${$$i$$}
-eqnPrefix:
-- eq.
-- eqns.
-eqnPrefixTemplate: $$p$$ $$i$$
-equationNumberTeX: \qquad
-figLabels: arabic
-figPrefix:
-- fig.
-- figs.
-figPrefixTemplate: $$p$$ $$i$$
-figureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
-figureTitle: Figure
-lastDelim: ", "
-linkReferences: false
-listings: false
-listingTemplate: $$listingTitle$$ $$i$$$$titleDelim$$ $$t$$
-listingTitle: Listing
-listItemTitleDelim: .
-lofItemTemplate: |
-  $$lofItemTitle$$$$i$$$$listItemTitleDelim$$ $$t$$  
-lofTitle: |
-  # List of Figures
-lolItemTemplate: |
-  $$lolItemTitle$$$$i$$$$listItemTitleDelim$$ $$t$$  
-lolTitle: |
-  # List of Listings
-lotItemTemplate: |
-  $$lotItemTitle$$$$i$$$$listItemTitleDelim$$ $$t$$  
-lotTitle: |
-  # List of Tables
-lstLabels: arabic
-lstPrefix:
-- lst.
-- lsts.
-lstPrefixTemplate: $$p$$ $$i$$
-nameInLink: false
-numberSections: false
-pairDelim: ", "
-rangeDelim: "-"
-refDelim: ", "
-refIndexTemplate: $$i$$$$suf$$
-secHeaderDelim: 
-secHeaderTemplate: $$i$$$$secHeaderDelim[n]$$$$t$$
-secLabels: arabic
-secPrefix:
-- sec.
-- secs.
-secPrefixTemplate: $$p$$ $$i$$
-sectionsDepth: 0
-subfigGrid: false
-subfigLabels: alpha a
-subfigureChildTemplate: $$i$$
-subfigureRefIndexTemplate: $$i$$$$suf$$ ($$s$$)
-subfigureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$. $$ccs$$
-tableEqns: false
-tableTemplate: $$tableTitle$$ $$i$$$$titleDelim$$ $$t$$
-tableTitle: Table
-tblLabels: arabic
-tblPrefix:
-- tbl.
-- tbls.
-tblPrefixTemplate: $$p$$ $$i$$
-titleDelim: ":"
----
-
 
 
 # Introduction {#chap-intro}
@@ -197,8 +101,12 @@ or continuous set (regression).
 #### Regression
 
 For a regression problem, the training data ${\cal D}_n$ is in the form
-of a set of pairs: $${\cal D}_n= \{(x^{(1)},
-  y^{(1)}), \ldots, (x^{(n)}, y^{(n)})\},$$ where $x^{(i)}$ represents
+of a set of pairs: 
+$$
+{\cal D}_n= \{(x^{(1)},
+  y^{(1)}), \ldots, (x^{(n)}, y^{(n)})\},
+$$
+ where $x^{(i)}$ represents
 an input, most typically a $d$-dimensional vector of real and/or
 discrete values, and $y^{(i)}$ is the output to be predicted, in this
 case a real-number. The $y$ values are sometimes called *target values*.
@@ -216,7 +124,7 @@ $y^{(i)}$ can take do not have an order. The classification problem is
 drawn from a set of two possible values; otherwise, it is called
 *multi-class*.
 
-### Unsupervised learning {#sec:intro_unsupervised}
+### Unsupervised learning {#sec-intro_unsupervised}
 
 *Unsupervised* learning doesn't involve learning a function from inputs
 to outputs based on a set of input-output pairs. Instead, one is given a
@@ -352,7 +260,7 @@ The effect of an assumption is often to reduce the "size" or
 reduce the amount of data required to reliably identify an appropriate
 hypothesis.
 
-## Evaluation criteria {#sec:evaluation}
+## Evaluation criteria {#sec-evaluation}
 
 Once we have specified a problem class, we need to say what makes an
 output or the answer to a query good, given the training data. We
@@ -367,23 +275,39 @@ answer is actually $a$. There are many possible loss functions. Here are
 some frequently used examples:
 
 - **0-1 Loss** applies to predictions drawn from finite domains.
-  $$\mathcal{L}(g, a) = \begin{cases}
+  
+$$
+\mathcal{L}(g, a) = \begin{cases}
               0 & \text{if $g = a$} \\
               1 & \text{otherwise}
-            \end{cases}$$
+            \end{cases}
+$$
 
-- **Squared loss** $$\mathcal{L}(g, a) = (g - a)^2$$
 
-- **Absolute loss** $$\mathcal{L}(g, a) = |g - a|$$
+- **Squared loss** 
+$$
+\mathcal{L}(g, a) = (g - a)^2
+$$
+
+
+- **Absolute loss** 
+$$
+\mathcal{L}(g, a) = |g - a|
+$$
+
 
 - **Asymmetric loss** Consider a situation in which you are trying to
   predict whether someone is having a heart attack. It might be much
   worse to predict "no" when the answer is really "yes", than the other
-  way around. $$\mathcal{L}(g, a) = \begin{cases}
+  way around. 
+$$
+\mathcal{L}(g, a) = \begin{cases}
               1  & \text{if $g = 1$ and $a = 0$} \\
               10 & \text{if $g = 0$ and $a = 1$} \\
               0  & \text{otherwise}
-            \end{cases}$$
+            \end{cases}
+$$
+
 
 Any given prediction rule will usually be evaluated based on multiple
 predictions and the loss of each one. At this level, we might be
@@ -450,10 +374,14 @@ the *test error*. If we don't have that actual underlying distribution,
 or even an estimate of it, we can take the approach of minimizing the
 *training error*: that is, finding the prediction rule $h$ that
 minimizes the average loss on our training data set. So, we would seek
-$\Theta$ that minimizes $$\begin{align}
+$\Theta$ that minimizes 
+$$
+\begin{align}
   \mathcal{E}_n(h; \Theta) =  \frac{1}{n}\sum_{i = 1}^n
   \mathcal{L}(h(x^{(i)};\Theta), y^{(i)})\;\;,
-\end{align}$$
+\end{align}
+$$
+
 
 where the loss function $\mathcal{L}(g, a)$ measures how bad it would be
 to make a guess of $g$ when the actual value is $a$.

@@ -15,11 +15,7 @@
     },
     "start": {
       "name": "start",
-      "command": "yarn start",
-      "runAtStart": true,
-      "preview": {
-        "port": 3000
-      }
+      "command": "yarn start"
     },
     "build": {
       "name": "build",
@@ -40,6 +36,7 @@
     "serve": {
       "name": "serve",
       "command": "yarn serve",
+      "runAtStart": true,
       "preview": {
         "port": 3000
       }

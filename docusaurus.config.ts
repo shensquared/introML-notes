@@ -14,7 +14,7 @@ const config: Config = {
     url: "https://introml.mit.edu",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: "/spring24",
+    baseUrl: "/spring24/notes",
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.

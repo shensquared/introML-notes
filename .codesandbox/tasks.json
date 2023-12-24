@@ -39,7 +39,10 @@
     },
     "serve": {
       "name": "serve",
-      "command": "yarn serve"
+      "command": "yarn serve",
+      "preview": {
+        "port": 3000
+      }
     },
     "write-translations": {
       "name": "write-translations",

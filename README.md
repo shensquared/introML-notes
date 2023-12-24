@@ -1,13 +1,16 @@
 # 6.390 IntroML Lecture Notes
 
-Source code for https://introml.mit.edu/notes
-- [ ] set up Nginx decoupling catsoop
+Source code for ... https://github.com/shensquared/introml-notes/issues/3
 
-## Typos and/or fixes
+## typos and fixes:
 - Edit the `markdown` files under `notes` folder
 - Each note page should also have an "Edit the Page" hyperlink directly pointing to the source `*.md` file.
+- Issue reports welcome
 
-### Installation
+### Installation-free Edit:
+Use [Sandbox](https://codesandbox.io/p/github/shensquared/introml-notes/main) for an installation-free playground, and start editing in the browser.
+
+### Local Installation/Development:
 
 ```
 $ yarn

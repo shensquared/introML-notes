@@ -108,7 +108,7 @@ const config: Config = {
                 },
                 {
                     href: "https://github.com/shensquared/introml-notes",
-                    label: "GitHub",
+                    className: "header-github-link",
                     position: "right",
                 },
             ],

@@ -1,6 +1,6 @@
 # 6.390 IntroML Lecture Notes
 
-Source code for ... https://github.com/shensquared/introml-notes/issues/3
+Source code for https://introml.mit.edu/spring24/notes/
 
 ## typos and fixes:
 - Edit the `markdown` files under `notes` folder

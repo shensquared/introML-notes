@@ -1,14 +1,12 @@
 # 6.390 IntroML Lecture Notes
 
-Source code for ... https://github.com/shensquared/introml-notes/issues/3
-
-## typos and fixes:
+## Where to fix typos and fixes:
 - Edit the `markdown` files under `notes` folder
 - Each note page should also have an "Edit the Page" hyperlink directly pointing to the source `*.md` file.
 - Issue reports welcome
 
-### Installation-free Edit:
-Use [Sandbox](https://codesandbox.io/p/github/shensquared/introml-notes/main) for an installation-free playground, and start editing in the browser.
+<!-- ### Installation-free Edit:
+Use [Sandbox](https://codesandbox.io/p/github/shensquared/introml-notes/main) for an installation-free playground, and start editing in the browser. -->
 
 ### Local Installation/Development:
 

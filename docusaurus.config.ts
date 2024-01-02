@@ -38,6 +38,10 @@ const config: Config = {
             "classic",
             {
                 docs: {
+                    admonitions: {
+                        keywords: ["codebox", "example"],
+                        extendDefaults: true,
+                    },
                     path: "notes",
                     remarkPlugins: [remarkMath],
                     rehypePlugins: [
